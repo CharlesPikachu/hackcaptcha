@@ -8,15 +8,15 @@ You can star this repository to keep track of the project if it's helpful for yo
 still on the way
 
 # Support List
-|  Captcha Type        |   Supported?     |  in Chinese    |
-|  :----:              |   :----:         |  :----:        |
-|  Slider              |   ✓              |  滑块验证码    |
-|  Digital             |   ✗              |  数字验证码    |
-|  Click               |   ✗              |  点击验证码    |
+|  Captcha Type        |   Supported?     |  Number of supported algorithms    |  in Chinese    |
+|  :----:              |   :----:         |  :----:                            |  :----:        |
+|  Slider              |   ✓              |  1								   |  滑块验证码    |
+|  Digital             |   ✗              |  0								   |  数字验证码    |
+|  Click               |   ✗              |  0								   |  点击验证码    |
 
 
 # Install
-#### Pip install
+#### Pip install(preparing)
 ```
 run "pip install CaptchaCracker"
 ```
@@ -28,6 +28,9 @@ Step2: cd DecryptLogin -> run "python setup.py install"
 (2) Online
 run "pip install git+https://github.com/CharlesPikachu/CaptchaCracker.git@master"
 ```
+
+# Quick Start
+preparing
 
 # More
 #### WeChat Official Accounts
