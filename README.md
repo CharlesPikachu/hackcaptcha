@@ -24,7 +24,7 @@ run "pip install CaptchaCracker"
 ```sh
 (1) Offline
 Step1: git clone https://github.com/CharlesPikachu/CaptchaCracker.git
-Step2: cd DecryptLogin -> run "python setup.py install"
+Step2: cd CaptchaCracker -> run "python setup.py install"
 (2) Online
 run "pip install git+https://github.com/CharlesPikachu/CaptchaCracker.git@master"
 ```
