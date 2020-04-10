@@ -10,7 +10,7 @@ GitHub:
 更新日期:
 	2020-03-08
 '''
-import CaptchaCracker
+import hackcaptcha
 from setuptools import setup, find_packages
 
 
@@ -21,8 +21,8 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 '''setup'''
 setup(
-	name='CaptchaCracker',
-	version=CaptchaCracker.__version__,
+	name='hackcaptcha',
+	version=hackcaptcha.__version__,
 	description='Provide api functions for captcha recognition.',
 	long_description=long_description,
 	long_description_content_type='text/markdown',
@@ -32,11 +32,11 @@ setup(
 			'Intended Audience :: Developers',
 			'Operating System :: OS Independent'],
 	author='Charles',
-	url='https://github.com/CharlesPikachu/CaptchaCracker',
+	url='https://github.com/CharlesPikachu/hackcaptcha',
 	author_email='charlesjzc@qq.com',
 	license='MIT',
 	include_package_data=True,
-	install_requires=['opencv-python >= 4.1.2'],
+	install_requires=['opencv-python >= 4.1.2', 'requests >= 2.22.0'],
 	zip_safe=True,
 	packages=find_packages()
 )

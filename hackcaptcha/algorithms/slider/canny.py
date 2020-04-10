@@ -17,11 +17,11 @@ import cv2
 '''canny cracker'''
 class CannyCracker():
 	def __init__(self, **kwargs):
-		self.info = 'CannyCracker'
+		self.info = 'canny cracker for slider captcha.'
 	'''外部调用的识别函数'''
 	def recognize(self, imagepath, **kwargs):
 		# 返回的信息
-		infos_return = {'is_success': False, 'position': [], 'tip': 'the format of the position is (cx, cy, w, h)'}
+		infos_return = {'is_success': False, 'result': [], 'tip': 'the format of the result is (cx, cy, w, h)'}
 		# 图片提取
 		image = cv2.imread(imagepath)
 		# 利用canny算子找滑块缺口位置
@@ -38,11 +38,10 @@ class CannyCracker():
 				x, y, w, h = cv2.boundingRect(contour)
 				cx = x - w / 2
 				cy = y - h / 2
-				infos_return.update({'is_success': True, 'position': [cx, cy, w, h]})
+				infos_return.update({'is_success': True, 'result': [cx, cy, w, h]})
 				break
+		# 返回必要的数据
 		return infos_return
-
-
-'''test'''
-if __name__ == '__main__':
-	CannyCracker().recognize('')
+	'''repr'''
+	def __repr__(self):
+		return self.info
