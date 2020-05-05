@@ -11,7 +11,7 @@ still on the way
 |  Captcha Type        |   Number of supported algorithms    |    Number of supported webapis        |   in Chinese    |
 |  :----:              |   :----:                            |    :----:                             |   :----:        |
 |  Slider              |   1								 |    0                                  |   滑块验证码    |
-|  Digital             |   0								 |    0                                  |   数字验证码    |
+|  Digital             |   0								 |    1                                  |   数字验证码    |
 |  Click               |   0								 |    0                                  |   点击验证码    |
 
 
@@ -47,6 +47,7 @@ from hackcaptcha.crackers import WebapisCracker
 cracker = WebapisCracker()
 # slider captcha
 # digital captcha
+infos_return = cracker.digital(imagepath='CAPTCHA IMAGE PATH', webapi_type='baidu', app_id='AppID', api_key='API Key', secret_key='Secret Key')
 # click captcha
 ```
 

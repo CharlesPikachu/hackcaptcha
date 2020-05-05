@@ -20,7 +20,7 @@ class CannyCracker():
 		self.info = 'canny cracker for slider captcha.'
 	'''外部调用的识别函数'''
 	def recognize(self, imagepath, **kwargs):
-		# 返回的信息
+		# 定义返回的信息
 		infos_return = {'is_success': False, 'result': [], 'tip': 'the format of the result is (cx, cy, w, h)'}
 		# 图片提取
 		image = cv2.imread(imagepath)

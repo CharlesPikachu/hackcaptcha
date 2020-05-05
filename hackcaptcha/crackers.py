@@ -5,6 +5,10 @@ Author:
 	Charles
 微信公众号:
 	Charles的皮卡丘
+GitHub:
+	https://github.com/CharlesPikachu
+更新日期:
+	2020-05-05
 '''
 from . import webapis
 from . import algorithms
@@ -33,6 +37,16 @@ class AlgorithmsCracker(object):
 class WebapisCracker(object):
 	def __init__(self, **kwargs):
 		self.info = 'webapis cracker'
+	'''数字验证码'''
+	def digital(self, imagepath, webapi_type='baidu', **kwargs):
+		# 利用百度提供的接口识别验证码
+		if webapi_type == 'baidu':
+			cracker = webapis.digital.BaiduAPICracker()
+		# 不支持该算法类型则报错
+		else:
+			raise ValueError('Unsupport webapi_type %s in WebapisCracker.digital...' % webapi_type)
+		# 利用对应的cracker识别并返回结果
+		return cracker.recognize(imagepath, **kwargs)
 	'''repr'''
 	def __repr__(self):
 		return self.info
