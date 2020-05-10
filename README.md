@@ -5,7 +5,10 @@ You can star this repository to keep track of the project if it's helpful for yo
 ```
 
 # Documents
-still on the way
+#### in Chinese
+
+#### in English
+
 
 # Support List
 |  Captcha Type        |   Number of supported algorithms    |    Number of supported webapis        |   in Chinese    |
