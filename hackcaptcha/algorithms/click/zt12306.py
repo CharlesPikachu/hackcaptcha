@@ -45,7 +45,7 @@ class Zt12306Cracker():
 		label = text_model.predict(image_text).argmax()
 		result = TEXTS[label]
 		text_results.append(result)
-		offset = {1: 27, 2: 47, 3: 60}.get(len(text))
+		offset = {1: 27, 2: 47, 3: 60}.get(len(result))
 		image_text = self.__getImageText(image, offset)
 		if image_text.mean() < 0.95:
 			label = text_model.predict(image_text).argmax()
@@ -53,14 +53,14 @@ class Zt12306Cracker():
 			text_results.append(result)
 		# 识别目标
 		object_model = keras.models.load_model(object_model_path)
-		labels = object_model.predict(image_objects)
+		labels = object_model.predict(np.array(image_objects))
 		labels = labels.argmax(axis=1)
 		# 文字所指的类别匹配目标类别
 		results = []
 		for idx, label in enumerate(labels):
 			if TEXTS[label] in text_results:
-				results.append(idx+1)
-		infos_return.update({'result': ','.join(results)})
+				results.append(str(idx+1))
+		infos_return.update({'is_success': True, 'result': ','.join(results)})
 		# 返回识别结果
 		return infos_return
 	'''获取文字部分的图片'''
@@ -74,7 +74,7 @@ class Zt12306Cracker():
 		image_objects = []
 		for i in range(40, image.shape[0]-length, interval+length):
 			for j in range(interval, image.shape[1]-length, interval+length):
-				image_object = image[i: i+length, j: j+length]
+				image_object = image[i: i+length, j: j+length].astype('float32')
 				image_object -= [103.939, 116.779, 123.68]
 				image_objects.append(image_object)
 		return image_objects
