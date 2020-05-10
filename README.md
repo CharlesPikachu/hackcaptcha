@@ -39,6 +39,7 @@ cracker = AlgorithmsCracker()
 infos_return = cracker.slider(imagepath='CAPTCHA IMAGE PATH', algorithm_type='canny')
 # digital captcha
 # click captcha
+infos_return = cracker.slider(imagepath='CAPTCHA IMAGE PATH', algorithm_type='zt12306', text_model_path="text.h5", object_model_path="object.h5")
 ```
 #### hack captcha by webapis
 ```
