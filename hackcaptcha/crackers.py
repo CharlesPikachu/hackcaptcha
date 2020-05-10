@@ -28,6 +28,16 @@ class AlgorithmsCracker(object):
 			raise ValueError('Unsupport algorithm_type %s in AlgorithmsCracker.slider...' % algorithm_type)
 		# 利用对应的cracker识别并返回结果
 		return cracker.recognize(imagepath, **kwargs)
+	'''点击验证码'''
+	def click(self, imagepath, algorithm_type='zt12306', **kwargs):
+		# 12306点击验证码
+		if algorithm_type == 'zt12306':
+			cracker = algorithms.click.Zt12306Cracker()
+		# 不支持该算法类型则报错
+		else:
+			raise ValueError('Unsupport algorithm_type %s in AlgorithmsCracker.click...' % algorithm_type)
+		# 利用对应的cracker识别并返回结果
+		return cracker.recognize(imagepath, **kwargs)
 	'''repr'''
 	def __repr__(self):
 		return self.info

@@ -12,11 +12,11 @@ still on the way
 |  :----:              |   :----:                            |    :----:                             |   :----:        |
 |  Slider              |   1								 |    0                                  |   滑块验证码    |
 |  Digital             |   0								 |    1                                  |   数字验证码    |
-|  Click               |   0								 |    0                                  |   点击验证码    |
+|  Click               |   1								 |    0                                  |   点击验证码    |
 
 
 # Install
-#### Pip install(preparing)
+#### Pip install
 ```
 run "pip install hackcaptcha"
 ```
@@ -49,6 +49,11 @@ cracker = WebapisCracker()
 # digital captcha
 infos_return = cracker.digital(imagepath='CAPTCHA IMAGE PATH', webapi_type='baidu', app_id='AppID', api_key='API Key', secret_key='Secret Key')
 # click captcha
+```
+
+# References
+```
+[1]. https://github.com/zhaipro/easy12306
 ```
 
 # More

@@ -36,7 +36,7 @@ setup(
 	author_email='charlesjzc@qq.com',
 	license='MIT',
 	include_package_data=True,
-	install_requires=['opencv-python >= 4.1.2', 'requests >= 2.22.0'],
+	install_requires=['opencv-python >= 4.1.2', 'requests >= 2.22.0', 'keras >= 2.2.4', 'numpy >= 1.16.2'],
 	zip_safe=True,
 	packages=find_packages()
 )
