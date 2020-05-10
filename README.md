@@ -4,10 +4,12 @@ Provide api functions for captcha recognition, this repo is created mainly for h
 You can star this repository to keep track of the project if it's helpful for you, thank you for your support.
 ```
 
+
 # Documents
 #### in Chinese
-
+https://hackcaptcha-en.readthedocs.io/zh/latest/
 #### in English
+https://hackcaptcha-en.readthedocs.io/en/latest/
 
 
 # Support List
@@ -32,6 +34,7 @@ Step2: cd hackcaptcha -> run "python setup.py install"
 run "pip install git+https://github.com/CharlesPikachu/hackcaptcha.git@master"
 ```
 
+
 # Quick Start
 #### hack captcha by algorithms
 ```
@@ -55,10 +58,12 @@ infos_return = cracker.digital(imagepath='CAPTCHA IMAGE PATH', webapi_type='baid
 # click captcha
 ```
 
+
 # References
 ```
 [1]. https://github.com/zhaipro/easy12306
 ```
+
 
 # More
 #### WeChat Official Accounts

@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-hackcaptcha中文文档
+Welcome to hackcaptcha's Document
 ========================================
 
 .. toctree::

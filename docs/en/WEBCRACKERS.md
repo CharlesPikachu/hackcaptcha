@@ -1,19 +1,19 @@
-# 接口破解
+# Webapis
 
-## 点击验证码
+## Click Captcha
 ```
-暂不支持
+Unsupported now.
 ```
 
-## 数字验证码
-#### 百度API
-调用百度API进行数字验证码识别的代码示例如下:
+## Digital Captcha
+#### Baidu API
+Here is an example:
 ```
 from hackcaptcha.crackers import WebapisCracker
 cracker = WebapisCracker()
 infos_return = cracker.digital(imagepath='CAPTCHA IMAGE PATH', webapi_type='baidu', app_id='AppID', api_key='API Key', secret_key='Secret Key')
 ```
-返回的结果示例:
+the format of infos_return is:
 ```
 {
     'is_success': True,
@@ -22,7 +22,7 @@ infos_return = cracker.digital(imagepath='CAPTCHA IMAGE PATH', webapi_type='baid
 }
 ```
 
-## 滑块验证码
+## Slider Captcha
 ```
-暂不支持
+Unsupported now.
 ```
